@@ -46,7 +46,7 @@ function isEven(num)
 }
 
 //find the average of an array
-function average() 
+function average(input) 
 {
 	var total = 0;
 	for (var i = 0; i < this.length; ++i) 
@@ -75,3 +75,12 @@ function permute(input) {
     })();
 }
 
+function guessnumbers() {
+	var arr = []
+	while(arr.length < 4) {
+    var randomnumber = Math.ceil(Math.random()*100)
+    if(arr.indexOf(randomnumber) > -1) continue;
+    arr[arr.length] = randomnumber;
+	}
+	return arr;
+}
